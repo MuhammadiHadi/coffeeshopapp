@@ -1,3 +1,4 @@
+import 'package:coffeeshopapp/Screen/detailPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -81,68 +82,75 @@ class Special extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        height: MediaQuery.of(context).size.height * 0.2,
-        width: MediaQuery.of(context).size.width * 0.4,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30), color: Color(0xff212325)),
-        child: Center(
-          child: Column(
-            children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-                child: ListTile(
-                  title: Text(
-                    "Luwak Coffee",
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 22,
-                        color: Colors.white),
-                  ),
-                  subtitle: Text(
-                    "Premium flavor",
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 12,
-                        color: Color(0xff9199A1)),
-                  ),
-                  trailing:
-                      // Image.asset("assets/images/2.png")
-                      CircleAvatar(
-                    radius: 60,
-                    backgroundColor: Colors.black,
-                    backgroundImage: AssetImage(
-                      "assets/images/2.png",
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 24,
-                  right: 24,
-                ),
-                child: Row(
-                  children: [
-                    Text(
-                      "500",
+    return InkWell(
+      onTap: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (_) => DetailPage()));
+      },
+      child: Container(
+          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          height: MediaQuery.of(context).size.height * 0.2,
+          width: MediaQuery.of(context).size.width * 0.4,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              color: Color(0xff212325)),
+          child: Center(
+            child: Column(
+              children: [
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  child: ListTile(
+                    title: Text(
+                      "Luwak Coffee",
                       style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 20,
-                          color: Color(0xffC49450)),
+                          fontWeight: FontWeight.w700,
+                          fontSize: 22,
+                          color: Colors.white),
                     ),
-                    Icon(
-                      Icons.add,
-                      size: 40,
-                      color: Color(0xffC49450),
-                    )
-                  ],
+                    subtitle: Text(
+                      "Premium flavor",
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12,
+                          color: Color(0xff9199A1)),
+                    ),
+                    trailing:
+                        // Image.asset("assets/images/2.png")
+                        CircleAvatar(
+                      radius: 60,
+                      backgroundColor: Colors.black,
+                      backgroundImage: AssetImage(
+                        "assets/images/2.png",
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ));
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 24,
+                    right: 24,
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        "500",
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 20,
+                            color: Color(0xffC49450)),
+                      ),
+                      Icon(
+                        Icons.add,
+                        size: 40,
+                        color: Color(0xffC49450),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          )),
+    );
   }
 }

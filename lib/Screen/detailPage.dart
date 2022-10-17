@@ -12,7 +12,13 @@ class _DetailPageState extends State<DetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: [],
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height * 0.3,
+            width: double.infinity,
+            color: Colors.black,
+          )
+        ],
       ),
     );
   }

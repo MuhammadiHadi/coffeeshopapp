@@ -159,6 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       image: "assets/images/2.png",
                       title: "Espresso Cappuccino",
                       subtitle: "Dark Roast",
+                      price: "400",
                     ),
                     SizedBox(
                       width: 10,
@@ -167,6 +168,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       image: "assets/images/1.png",
                       title: "Caffè Mocha Americano",
                       subtitle: "Decaf Pike",
+                      price: "500",
                     ),
                     SizedBox(
                       width: 10,
@@ -175,6 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       image: "assets/images/5.png",
                       title: "Mocha Americano",
                       subtitle: "Decaf Pike",
+                      price: "550",
                     ),
                   ],
                 ),

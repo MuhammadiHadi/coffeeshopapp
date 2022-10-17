@@ -82,13 +82,18 @@ class _DetailPageState extends State<DetailPage> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Text("Back to Home",
-                textAlign: TextAlign.center,
-                style: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 22,
-                  color: Color(0xffC49450),
-                )),
+            child: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Text("Back to Home",
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 22,
+                    color: Color(0xffC49450),
+                  )),
+            ),
           ),
         ],
       ),
